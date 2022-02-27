@@ -24,7 +24,7 @@ public class FakePersonDataAccessService implements PersonDao {
         return DB;
     }
 
-    @Override
+    @Override //Optional เอามาใช้ในการจัดการกับ NullPointerExceptions
     public Optional<Person> selectPersonById(UUID id) {
         return DB.stream()
                 .filter(person -> person.getId().equals(id))
