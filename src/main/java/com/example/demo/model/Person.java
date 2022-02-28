@@ -4,10 +4,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.validation.constraints.NotBlank;
 import java.util.UUID;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "person")
 public class Person {
-
+    @Id
     private final UUID id;
+    @Column(name = "name")
     @NotBlank
     private final String name;
 
