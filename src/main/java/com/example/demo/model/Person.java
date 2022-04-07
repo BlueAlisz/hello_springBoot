@@ -6,6 +6,7 @@ import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 import javax.persistence.*;
 
+
 @Entity
 @Table(name = "person")
 public class Person {
